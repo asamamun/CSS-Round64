@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: red;
+      }
+      h2 {
+        color: green;
+      }
+      /* LoVe HAte pseudo classes */
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: rgb(221, 87, 192);
+      }
+      a:hover {
+        color: rgb(191, 129, 12);
+        /* font-size: 1.1em; */
+        font-family: algerian;
+      }
+      a:active {
+        color: yellow;
+        font-size: 1.1em;
+      }
+      /* Pseudo elements */
+      h2:first-letter {
+          color: aqua;
+          font-size: 2em;
+      }
+      p::first-line {
+          text-transform: uppercase;
+          color: blue;
+      }
+      table{
+          border-collapse: collapse;
+          width: 100%;
+      }
+      /* descendant selector */
+      table a:link{ color: sandybrown; text-decoration: none;}
+      table a:visited{ color: seagreen; }
+      table a:hover{ color: sienna; text-decoration: underline; font-family: 'Times New Roman', Times, serif}
+      table a:active{ color: slateblue;}
+      table th{ background-color: bisque;}
+    </style>
+  </head>
+  <body>
+    <hgroup>
+      <h1>The DOM represents an HTML or XML document as a tree of nodes.</h1>
+      <h2>
+        Each node is an object that represents a part of the document (e.g., an
+        element, attribute, or text).
+      </h2>
+    </hgroup>
+
+    <pre><p>
+Every part of the document is represented as a node in the DOM tree.
+
+Types of nodes:
+
+Element Node: Represents an HTML element (e.g., &lt;div&gt;, &lt;p&gt;).
+
+Text Node: Represents the text content inside an element.
+
+Attribute Node: Represents an attribute of an element (e.g., class, id).
+
+Comment Node: Represents an HTML comment.
+
+Document Node: Represents the entire document.
+</p>
+</pre>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt, dolores nostrum distinctio explicabo quasi vel esse iure quibusdam repellendus dignissimos fuga suscipit ducimus ex magnam itaque nobis accusamus ut.
+Temporibus odit aut quia dicta vel pariatur voluptates nihil ipsum maxime nobis illo accusamus laudantium praesentium nulla eius quas debitis doloremque at, voluptate eum fugit aliquid ab? A, velit et?
+Dolores, id ab dolorem assumenda qui vitae facere sunt exercitationem repellendus reiciendis. Ipsum, et? Quis vel laudantium voluptatibus tenetur blanditiis corporis. Molestias quod sint doloremque. Vitae pariatur in dicta aliquid!
+Ut exercitationem nisi excepturi illo ipsum rem quas quia esse accusamus laboriosam rerum quibusdam quis soluta labore et provident dicta totam, maiores voluptas placeat! Veritatis, accusamus cupiditate! Repellendus, asperiores. Neque.
+Excepturi temporibus dignissimos eaque, non necessitatibus atque itaque adipisci! Harum cum odit facilis hic iusto? Sit optio ipsa, corrupti ullam facere deleniti doloribus quidem aspernatur explicabo asperiores commodi placeat voluptatibus.</p>
+    <hr />
+    <h3>list of bangla newspapers</h3>
+    <ul>
+      <li>
+        <a href="https://www.prothomalo.com/" target="_blank">prothomnalo</a>
+      </li>
+      <li>
+        <a href="https://www.dhakapost.com/" target="_blank">dhakapost</a>
+      </li>
+      <li><a href="https://www.aarong.com/" target="_blank">Aarong</a></li>
+      <li><a href="https://www.mzamin.com/" target="_blank">mZamin</a></li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th><a href="">link</a></th>
+            <th><a href="">link</a></th>
+            <th><a href="">link</a></th>
+            <th><a href="">link</a></th>
+            <th><a href="">link</a></th>
+        </tr>
+        <tr>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+        </tr>
+        <tr>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+        </tr>
+        <tr>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+        </tr>
+        <tr>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+            <td><a href="">link</a></td>
+        </tr>
+    </table>
+  </body>
+</html>

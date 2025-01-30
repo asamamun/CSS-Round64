@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input and Select Styling */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea Styling */
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px;
+}
+
+/* Select Dropdown Styling */
+select {
+  appearance: none; /* Remove default arrow */
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592c.859 0 1.319 1.013.753 1.658l-4.796 5.48a1 1 0 01-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
+/* Style for invalid required inputs */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+  border-color: #ff0000; /* Red border */
+}
+
+/* Optional: Add a red outline or box-shadow for better visibility */
+input:required:invalid:focus,
+select:required:invalid:focus,
+textarea:required:invalid:focus {
+  outline: 2px solid #ff0000; /* Red outline on focus */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Red glow */
+}
+
+/* exact attribute value match */
+a[target="_blank"]{color: red;}
+/* starts with http */
+a[href^="http://"] {
+    color: rgba(0, 255, 30, 0.657);
+}
+/* ends with .jpg */
+a[href$=".jpg"]{ color:chocolate}
+    </style>
+</head>
+<body>
+    <h1>Student registration form</h1>
+<a href="css-properties.html">CSS property</a> | 
+<a href="inherited-style.html">Inherited style</a> | 
+<a href="http://w3schools.com/" target="_blank">w3schools</a></a> |
+<a href="images/bg.jpg">bg image</a> |
+<a href="images/tiles.jpg">bg image</a> |
+
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="gurdianName">Gurdian Name</label>
+        <input type="text" id="gurdianName" name="gurdianName" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        <label for="bloodGroup">Blood Group</label>
+        <select name="bloodGroup" id="bloodGroup" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select><br><br>
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea><br><br>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <label for="religion">Religion</label>
+        <select name="religion" id="religion">
+            <option value="Islam">Islam</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddhist">Buddhist</option>
+            <option value="Christian">Christian</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

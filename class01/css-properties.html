@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        ul{
+            background-image: url("images/tiles2x200.png");
+            background-size: cover;
+            /* background-image: radial-gradient(red, green, blue, yellow);
+            background-image: linear-gradient(to right, red, green, blue, yellow);
+            background-image: linear-gradient(to left, red, green, blue, yellow);
+            background-image: url("images/tiles2x200.png");
+            background-size: 100% 100%;
+            background-size: contain;
+            background-size: cover; */
+        }
+        #propertycontainer{
+            color: white;
+            color: brown;
+        }
+        ul li{ font-size: 2em;}
+    </style>
+
+</head>
+<body>
+    <h1>CSS Properties list</h1>
+    <div id="propertycontainer" style="width: 600px; margin: 10px auto;"></div>
+
+<script>
+    var element = document.createElement("div");
+    var properties = [];
+    
+    // Collect all property names from element.style
+    for (var index in element.style) {
+        if (typeof element.style[index] === 'string') { // Filter out non-string properties
+            properties.push(index);
+        }
+    }
+    
+    // Display the total count and the list of properties
+    var container = document.getElementById("propertycontainer");
+    container.innerHTML = "CSS has a total of " + properties.length + " properties.<br><br>";
+    
+    // Create a list of property names
+    var propertyList = document.createElement("ul");
+    properties.forEach(function(property) {
+        var listItem = document.createElement("li");
+        listItem.textContent = property;
+        propertyList.appendChild(listItem);
+    });
+    
+    container.appendChild(propertyList);
+</script>
+</body>
+</html>

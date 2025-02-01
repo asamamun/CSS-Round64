@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(233, 178, 178);
+  border-width: 5px;
+  border-style: dotted;
+  border-color: black;
+  margin: 20px;
+}
+#actioncontainer {
+  text-align: center;
+}
+#actioncontainer input {
+  width: 200px;
+  padding: 10px;
+  font-family: algerian;
+  font-size: 2em;
+  border-radius: 50%; 
+  transition: all .5s ease-in-out;
+}
+#actioncontainer input:hover {
+  background-color: rgb(108, 179, 214);
+  color: rgb(221, 206, 73);
+}

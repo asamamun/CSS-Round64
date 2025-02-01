@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form</title>
+    <style>
+        body { 
+            font-family: sans-serif;
+            background-color:none;
+            border: none}
+            form{ border: dotted 5px #333;
+                width: 60%;
+                margin: 0 auto;
+                background-color: #614d4d;
+                padding: 20px;
+                
+            }
+            label{display:inline;
+                font-weight:none;
+                width:20px;
+                margin:10px
+            }
+            h1{
+                text-align: center;
+                color:none;
+                margin-top: 50px;
+            }
+
+    </style>
+</head>
+<body>
+    <h1> <mark>Student Registration Form </mark></h1>
+
+    <form action="" method="">
+        <label for="first name">First Name</label>
+        <input type="text" id="first name" name="Fist Name" required placeholder="A****"> (Max 50 Characters Allowed)<br><br>
+        <label for="last name">Last Name</label>
+        <input type="text" id="last name" name="Last Name" required placeholder="R****"> (Max 50 Characters Allowed)<br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="yx@gmail.com"><br><br>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="01****"> (Max 11 Digits Allowed)<br><br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" id="male" name="gender" value="male" required> Male
+        <input type="radio" id="female" name="gender" value="female" required> Female
+       <br><br>
+
+        <label for="dob">Date of Birth</label>
+     <select><option value="day">Day<option></select>
+    
+        <select><option value="month">Month</option> </select>
+        <select><option value="year">Year</option></select>
+        <br><br>
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        <label for="city"> City</label>
+        <input type="text" id="city" name="city" required placeholder="Mir****"> (Max 50 Characters Allowed)<br><br>
+        <label for="pincode"> Pin code</label>
+        <input type="number" id="pin"name="pincode" required placeholder="123xxx"> (Max 6 Numbers Allowed)<br><br>
+        <label for=" state"> State</label>
+        <input type="text" id="state" name="city" required placeholder="Dha****"> (Max 50 Characters Allowed)<br> <br>
+        <label for="country"> Country</label>
+        <input type="text" id="country" name="country" required placeholder="Bangl****"> <br> <br>
+        <label for="hobies"> Hobies</label>
+        <input type="checkbox" id="Drawing" name="hobies" value="Drawing"> Drawing
+        <input type="checkbox" id="Singing" name="hobies" value="Singing"> Singing
+        <input type="checkbox" id="Dancing" name="hobies" value="Dancing"> Dancing
+        <input type="checkbox" id="Sketching" name="hobies" value="Sketching"> Sketching <br>
+        <input type="checkbox" id="Others" name="hobies" value="Others"> Others 
+        <input type="text" placeholder="Ex. teaching"> (Max 50 Characters Allowed)<br> <br>
+        <label for="qualification"> Qualification</label>
+        <input type="checkbox" id="High School" name="qualification" value="High School"> High School (10th) <br>
+        <input type="checkbox" id="Higher School" name="qualification" value="Higher School"> Higher School (12th)<br>
+        <input type="checkbox" id="Graduation" name="qualification" value="Graduation"> Graduation (Bachelors)<br>
+        <input type="checkbox" id="Post Graduation" name="qualification" value="Post Graduation"> Post Graduatio(Masters)<br>
+        <input type="checkbox" id="Phd" name="qualification" value="Phd"> Phd <br> <br>
+        <label for="course">Course Applied For</label>
+        <input type="radio" id="" Name="Course Applied For" value=""> BCA(Bachelor of Computer Application)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> B.Com( Bachelor of Commerce)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> B.SC(Bachelor of Science)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> BA(Bachelor of Business Arts)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> MCA(Master of Computer Applicatiomn)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> M.Com(Master of Commerce)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> M.SC(Master of Science)<br>
+        <input type="radio" id="" Name="Course Applied For" value=""> MA(Master of Arts)<br> <br>
+    
+<input type="button" value="Submit"> <input type="button" value="Reset">
+    </form>
+</body>
+</html>

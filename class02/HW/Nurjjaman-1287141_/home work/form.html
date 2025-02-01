@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(0, 183, 255);
+            border-radius: 8px;
+            border: 1px solid rgb(230, 31, 31);
+        }
+
+        div {
+            margin: 10px 0;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 10px;
+            /* font-weight: bold; */
+            border: 1px  black;
+           /* width: 100px; */
+        }
+
+        input[type="text"],
+        select {
+            width: 200px;
+            padding: 5px;
+
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+      
+    
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: rgb(21, 255, 0);
+        }
+
+        .input-group.textarea {
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            width: 300px;
+            padding: 5px;
+        }
+
+        small {
+            color: rgb(0, 119, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="">
+        <div>
+            <label for="Fname"><b>First Name:</b></label>
+            <input type="text" id="Fname" Name="First Name" required >(Max 50 Characters Allowed)
+
+           
+        </div>
+        <div>
+            <label for="Lname"><b>Last Name:</b></label>
+            <input type="text" id="Lname" Name="Last Name" required>(Max 50 Characters Allowed)
+           
+        </div>
+        <div>
+            <label for="email"><b>E-mail ID:</b></label>
+            <input type="text" id="email" Name="E-mail ID" required>
+        </div>
+        <div>
+            <label for="Mnumber"><b>Mobile Number</b></label>
+            <input type="text" id="Mnumber" placeholder="01xxxxx" name="Mobile Number" required>(10 Digit Allowed)
+        </div>
+        <div>
+            <label for="gender"><b>Gender</b></label>
+
+            <input id="male" type="radio" value="" name="gender"> <label for="male">Male</label>
+            <input id="female" type="radio" value="" name="gender"><label for="female">Female</label>
+            <input id="other" type="radio" value="" name="gender"><label for="other">Other</label>
+            <div>
+                <label for="Dbirth"><b>Date of Birth(DOB)</b></label>
+                <!-- <input type="day"id="day"Name="Day"required> -->
+                <!-- <input type="month"id="month"Name="Month"required> -->
+                <!-- <input type="year"id="year"Name="Year"required> -->
+                <input type="date" id="year" Name="Year" required>
+            </div>
+
+            <div class="input-group textarea">
+                <label for="comment"> </label>
+                <label for="comment"><b>Comment:</b> </label>
+                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="city" class="city"><b>Select your city:</b></label>
+                <select id="state" name="state" required>
+                    <option value="">--Please choose a city--</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="new_york">New York</option>
+                    <option value="los_angeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="houston">Houston</option>
+                    <option value="phoenix">Phoenix</option>
+                    <option value="philadelphia">Philadelphia</option>
+                    <option value="san_antonio">San Antonio</option>
+                    <option value="san_diego">San Diego</option>
+                    <option value="dallas">Dallas</option>
+                    <option value="san_jose">San Jose</option>
+                    <option value="austin">Austin</option>
+                    <option value="jacksonville">Jacksonville</option>
+                    <option value="fort_worth">Fort Worth</option>
+                    <option value="columbus">Columbus</option>
+                    <option value="charlotte">Charlotte</option>
+                    <option value="san_francisco">San Francisco</option>
+                    <option value="indianapolis">Indianapolis</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="denver">Denver</option>
+                    <option value="washington">Washington</option>
+                </select>
+            </div>
+            <div>
+                <label for="pincode"><b>Enter your Pin Code:</b></label>
+                <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                <small>Enter a 6-digit pin code</small>
+            </div>
+            <div>
+                <label for="state"><b>Select your State:</b></label>
+                <select id="state" name="state" required>
+                    <option value="">--Please choose a state--</option>
+                    <option value="alabama">Alabama</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="arizona">Arizona</option>
+                    <option value="arkansas">Arkansas</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="california">California</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="connecticut">Connecticut</option>
+                    <option value="delaware">Delaware</option>
+                    <option value="florida">Florida</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="hawaii">Hawaii</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="indiana">Indiana</option>
+                </select>
+            </div>
+            <div>
+                <label for="country"><b>Select your Country:</b></label>
+                <select id="country" name="country">
+                    <option value="">--Please choose a Country--</option>
+                    <option value="afghanistan">Afghanistan</option>
+                    <option value="albania">Albania</option>
+                    <option value="algeria">Algeria</option>
+                    <option value="andorra">Andorra</option>
+                    <option value="angola">Angola</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="australia">Australia</option>
+                    <option value="austria">Austria</option>
+                    <option value="azerbaijan">Azerbaijan</option>
+                    <option value="bahamas">Bahamas</option>
+                    <option value="bahrain">Bahrain</option>
+                    <option value="bangladesh">Bangladesh</option>
+                    <option value="barbados">Barbados</option>
+                    <option value="belarus">Belarus</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="belize">Belize</option>
+                    <option value="benin">Benin</option>
+                    <option value="bhutan">Bhutan</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="bosnia_herzegovina">Bosnia and Herzegovina</option>
+                    <option value="botswana">Botswana</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="brunei">Brunei</option>
+                    <option value="bulgaria">Bulgaria</option>
+                    <option value="burkina_faso">Burkina Faso</option>
+                    <option value="burundi">Burundi</option>
+                    <option value="cabo_verde">Cabo Verde</option>
+                    <option value="cambodia">Cambodia</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </div>
+            <div>
+<label for="hobbies"><b>Select you hobbies:</b></label><br><br>
+                
+                <input type="checkbox" id="Singing" name="hobbies" value="Singing"><label for="Singing">Singing</label>
+                
+                <input type="checkbox" id="Dancing" name="hobbies" value="Dancing"><label for="Dancing">Dancing</label>
+                
+                <input type="checkbox" id="music" name="hobbies" value="Music"><label for="music">Music</label>
+                
+                
+                <input type="checkbox" id="Drawing" name="hobbies" value="Drawing"><label for="Drawing">Drawing</label>
+               
+                <input type="checkbox" id="Other"  name="hobbies" value=""> <label for="Other">Other</label><br><br><input type="text">
+            
+            </div>
+            <div>
+                <label for="Qualification"><b>Qualification:</b></label><br><br>
+                <input type="checkbox"><label for="">High school(10th)</label><br><br>
+                <input type="checkbox"><label for="">Higher school(12th)</label><br><br>
+                <input type="checkbox"><label for="">Graduation(Bachelors)</label><br><br>
+                <input type="checkbox"><label for="">Post Graduation(Master)</label><br><br>
+                <input type="checkbox"><label for="">Phd</label><br><br>
+            </div>
+            <div>
+                <label for="courses"><b>Courses Applied For:</b></label><br><br>
+                <input type="radio"><label for="">BCA(Bachelor of Computer Applications)</label><br><br>
+                <input type="radio"><label for="">B.Com(Bachelor of Commerce)</label><br><br>
+                <input type="radio"><label for="">B.sc(Bachelor of Science)</label><br><br>
+                <input type="radio"><label for="">MCA(Master of Computer Applications)</label><br><br>
+                <input type="radio"><label for="">M.com(Master of Commerce)</label><br><br>
+                <input type="radio"><label for="">M.sc(Master of Science)</label><br><br>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="Reset" value="Reset">
+            </div>
+    </form>
+</body>
+
+</html>

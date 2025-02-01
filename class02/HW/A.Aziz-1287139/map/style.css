@@ -1,0 +1,55 @@
+main{
+    background-color: aquamarine;
+   max-width: 600px;
+   margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-size:cover ; */
+}
+label{
+    /* display: block; */
+    /* display: contents; */
+    display: inline-block;
+    /* display: flex; */
+    /* display: flexbox; */
+    /* display: grid; */
+    /* display: inline; */
+    /* display: inline-flex; */
+
+    /* display: inline-grid; */
+    /* display: inline-table; */
+    /* display: list-item; */
+    /* display: run-in; */
+    /* display: table; */
+    /* display: table-caption; */
+    /* display: -webkit-box; */
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+input[type="text"], input[type="email"], input[type="password"]
+input[type="tel"]input[type=country]{
+    width: 40%;
+    /* height: auto; */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+    border: 1px solid #ccc;
+}
+textarea{
+    width: 35%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 75px;
+    border: 1px solid #2e2343;
+}
+div{
+   display: block;;
+}
+.stg-border{
+    border: double black 3px;}

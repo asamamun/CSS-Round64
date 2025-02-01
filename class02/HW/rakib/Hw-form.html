@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Student registration form </title>
+
+    <style>
+        body {
+            background-color: aquamarine;
+            width: 100%;
+        }
+
+        label {
+            display: inline-block;
+            width: 40%;
+        }
+
+        label.chelenameye {
+            display: inline;
+        }
+        label.shokh{
+            display: inline;
+        }
+
+        fieldset {
+            border-style: dashed;
+            border-color: black;
+        }
+       input:hover{
+        background-color: rgb(162, 226, 43);
+       }
+       table{
+        width: 100%;
+       }
+    </style>
+
+</head>
+
+<body>
+    <fieldset>
+        <form action="submit.html" method="get">
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text" id="fname" required>(Max 50 Characters Allowed)</td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" id="lname">(Max 50 Characters Allowed)</td>
+                </tr>
+
+                <tr>
+                    <td> <label for="email"> Email ID</label></td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+
+
+
+                <tr>
+                    <td> <label for="mnumber"> Mobile Number</label></td>
+                    <td> <input type="text" id="mnumber" required>(10 Digits Allowed)</td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td><input type="radio" name="gender" id="male" value="Male" required><label for="male"
+                            class="chelenameye">Male</label>
+
+                        <input type="radio" name="gender" id="fmale" value="Female" required class="gu"><label
+                            for="fmale" class="chelenameye">Female</label><br>
+                    </td>
+                </tr>
+
+                <!-- date of Birth -->
+
+                <tr>
+                    <td><label for="datebirth">Date of Birth(DOB)</label></td>
+                    <td> <select name="month" id="">
+                            <option value="rajshahi">January</option>
+                            <option value="dhaka">Februaray</option>
+                            <option value="rongpur">March</option>
+                            <option value="sylet">April</option>
+                            <option value="cumilla">May</option>
+                            <option value="cumilla">June</option>
+                            <option value="cumilla">July</option>
+                            <option value="cumilla">August</option>
+                            <option value="cumilla">September</option>
+                            <option value="cumilla">October</option>
+                            <option value="cumilla">November</option>
+                            <option value="cumilla">December</option>
+                        </select>
+                        <select name="day" id="">
+                            <option value="rajshahi">1</option>
+                            <option value="dhaka">2</option>
+                            <option value="rongpur">3</option>
+                            <option value="sylet">4</option>
+                            <option value="cumilla">5</option>
+                            <option value="cumilla">6</option>
+                            <option value="cumilla">7</option>
+                            <option value="cumilla">8</option>
+                            <option value="cumilla">9</option>
+                            <option value="cumilla">10</option>
+                            <option value="cumilla">11</option>
+                            <option value="cumilla">12</option>
+                        </select>
+                        <select name="year" id="">
+                            <option value="rajshahi">1990</option>
+                            <option value="dhaka">1991</option>
+                            <option value="rongpur">1992</option>
+                            <option value="sylet">1993</option>
+                            <option value="cumilla">1994</option>
+                            <option value="cumilla">1995</option>
+                            <option value="cumilla">1996</option>
+                            <option value="cumilla">1997</option>
+                            <option value="cumilla">1998</option>
+                            <option value="cumilla">1999</option>
+                            <option value="cumilla">2000</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td><textarea name="address" id="address" required></textarea></td>
+                </tr>
+
+
+
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input type="text" id="city">(Max 50 Characters Allowed)</td>
+                </tr>
+
+                <tr>
+                    <td><label for="pincode">Pin Code</label></td>
+                    <td><input type="text" id="pincode"> (Max 6 Numbers Allowed)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">State</label>
+                    </td>
+                    <td><input type="text" id="state">(Max 50 Characters Allowed)</td>
+                </tr>
+
+
+
+                <tr>
+                    <td> <label for="country">Country</label></td>
+                    <td><input type="text" id="country"></td>
+                </tr>
+
+
+                <br>
+                <br>
+
+                <!-- Hobbies -->
+                <tr>
+                    <td><label for="hobby">Hobbies</label></td>
+                    <td><input type="radio">
+                        <label for="drawing" class="shokh">Drawing</label>     |
+                        <input type="radio"> 
+                        <label for="singing" class="shokh">Singing</label> |
+                        <input type="radio"> 
+                        <label for="dancing" class="shokh">Dancing</label> |
+                        <input type="radio"> 
+                        <label for="sketching" class="shokh">Sketching</label> |
+                        <input type="radio"> 
+                        <label for="other" class="shokh">Others</label>
+
+                        <textarea name="" id="other" placeholder="Ex-Teaching"></textarea>
+                    </td>
+                </tr>
+                <br>
+                <br>
+                <!-- Qualifications -->
+                <!-- kaj baki  -->
+
+                <tr>
+                    <td><label for="qualification">Qualification</label></td>
+                    <td> <input type="radio" id="class10">
+                        <label for="class10" class="porasesh">High School(10th)</label><br>
+                        <input type="radio" id="class12">
+                        <label for="class12" class="porasesh">Higher School(12th)</label><br>
+                        <input type="radio" id="bachelors">
+                        <label for="bachelors" class="porasesh">Graduation(Bachelors)</label><br>
+                        <input type="radio" id="masters">
+                        <label for="masters" class="porasesh">Post Graduation(Masters)</label><br>
+                        <input type="radio" id="phd">
+                        <label for="phd" class="porasesh">Phd</label>
+                    </td>
+                </tr>
+
+
+                <!-- Courses -->
+
+
+
+                <tr>
+                    <td>
+                        <label for="course">Courses Applied For</label>
+                    </td>
+                    <td> <input type="radio">
+                        <label for="bca">BCA(BAchelor of Computer Application)</label><br>
+                        <input type="radio">
+                        <label for="bcom">B.Com(Bachelor of Commerce)</label><br>
+                        <input type="radio">
+                        <label for="bsc">B.sc(Bachelor of Science)</label><br>
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td><label for=""></label></td>
+                    <td> <input type="submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+
+
+
+
+
+
+            </table>
+        </form>
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"] + label {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      input[type="radio"]:checked + label {
+        background-color: #007bff;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="radio" id="drawing" name="hobby"/>
+        <label for="drawing" class="shokh">Drawing</label> 
+        <input type="radio" id="singing" name="hobby" />
+        <label for="singing" class="shokh">Singing</label> 
+        <input type="radio" id="dancing" name="hobby" />
+        <label for="dancing" class="shokh">Dancing</label> 
+        <input type="radio" id="sketching" name="hobby" />
+        <label for="sketching" class="shokh">Sketching</label>
+      </div>
+    </form>
+  </body>
+</html>

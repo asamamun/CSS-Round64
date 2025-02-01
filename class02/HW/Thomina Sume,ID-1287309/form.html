@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+       
+            
+                <label for="text">First Name:</label>
+                <input type="text" name="first_name" maxlength="50" required><br><br>
+            
+            <label for="text">Last Name:</label>
+                <input type="text" name="last_name" maxlength="50" required><br><br>
+            
+            
+                <label for="email">Email ID:</label>
+                <input type="email" name="email" maxlength="50" required><br><br>
+            
+            
+                <label for="text">Mobile Number:</label>
+         <input type="text" name="mobile" maxlength="10" pattern="[0-9]{10}" required><br><br>
+            
+            
+                <label for="">Gender:</label>
+                
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female" required> Female<br><br>
+            
+            
+            
+                <label for="number">Date of Birth (DOB):</label>
+                
+                    
+                    <select name="day" id="day">
+                        <option value="">Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <input type="number" name="dob_day" placeholder="Day" min="1" max="31" required>
+                    <input type="number" name="dob_month" placeholder="Month" min="1" max="12" required>
+                    <input type="number" name="dob_year" placeholder="Year" min="1900" required><br><br>
+                
+            
+            
+                <label for="">Address:</label>
+                <textarea name="address" maxlength="100" required></textarea><br><br>
+            
+            
+                <label for="text">City:</label>
+                <input type="text" name="city" maxlength="50" required><br><br>
+            
+            
+                <label for="text">Pin Code:</label>
+                <input type="text" name="pin_code" maxlength="6" pattern="[0-9]{6}" required><br><br>
+            
+            
+                <label for="text">State:</label>
+                <input type="text" name="state" maxlength="50" required><br><br>
+            
+            
+                <label for="text">Country:</label>
+                <input type="text" name="country" maxlength="50" value="Bangladesh" required><br><br>
+            
+            
+                <label for="">Hobbies:</label>
+                
+                    <input type="checkbox" name="hobbies" value="Drawing"> Drawing
+                    <input type="checkbox" name="hobbies" value="Singing"> Singing
+                    <input type="checkbox" name="hobbies" value="Dancing"> Dancing
+                    <input type="checkbox" name="hobbies" value="Sketching"> Sketching
+                    <input type="checkbox" name="hobbies" value="Others"> Others<br><br>
+                
+            
+            
+                <label for="">Qualification:</label>
+                    <br>
+                    <input type="checkbox" name="qualification" value="High School (10th)"> High School (10th) <br>
+                    <input type="checkbox" name="qualification" value="Higher School (12th)"> Higher School (12th) <br>
+                    <input type="checkbox" name="qualification" value="Graduation (Bachelors)"> Graduation (Bachelors) <br>
+                    <input type="checkbox" name="qualification" value="Post Graduation (Masters)"> Post Graduation (Masters) <br>
+                    <input type="checkbox" name="qualification" value="Phd"> Phd<br><br>
+                
+            
+            
+                <label for="">Courses Applied For:</label><br>
+                
+                    <input type="checkbox" name="courses" value="BCA"> BCA (Bachelor of Computer Applications)<br>
+                    <input type="checkbox" name="courses" value="B.Com"> B.Com (Bachelor of Commerce)<br>
+                    <input type="checkbox" name="courses" value="B.Sc"> B.Sc (Bachelor of Science)<br>
+                    <input type="checkbox" name="courses" value="BA"> BA (Bachelor of Arts)<br>
+                    <input type="checkbox" name="courses" value="MCA"> MCA (Master of Computer Applications)<br>
+                    <input type="checkbox" name="courses" value="M.Com"> M.Com (Master of Commerce)<br>
+                    <input type="checkbox" name="courses" value="M.Sc"> M.Sc (Master of Science)<br>
+                    <input type="checkbox" name="courses" value="MA"> MA (Master of Arts)<br><br>
+                
+            
+            
+                <div id="actioncontainer">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+                    
+                
+            
+        
+    </form>
+</body>
+</html>

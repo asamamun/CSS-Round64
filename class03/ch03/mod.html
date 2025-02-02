@@ -1,0 +1,20 @@
+Math.random() = gives a random number between 0 and 1
+<style>
+    button{
+        padding: 20px;
+        font-size: 3em;
+    }
+    #result{
+        font-size: 50px;
+        margin: 20px;
+        text-align: center;
+    }
+</style>
+<button onclick="roll()">Roll the dice</button>
+<h1 id="result"></h1>
+<script>
+    function roll() {
+       document.getElementById("result").innerHTML = (Math.floor(Math.random() * 100) % 6) + 1;
+    }
+    // console.log((Math.floor(Math.random() * 100) % 6) + 1);
+</script>

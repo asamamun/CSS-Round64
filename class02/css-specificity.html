@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What Happens When Style Rules Conflict? CSS specificity</h1>
+    <pre>
+    When multiple CSS rules conflict (i.e., when two or more rules target the same element and define the same property but with different values), the browser uses **CSS specificity** to determine which rule takes precedence. Specificity is a weight or score that determines which style rule is applied to an element.
+
+---
+
+### How Specificity Works
+Specificity is calculated based on the components of a CSS selector. The more specific a selector is, the higher its priority. Specificity is broken down into four levels:
+
+1. **Inline Styles**:
+   - Inline styles (styles written directly in the `style` attribute of an HTML element) have the highest specificity.
+   - Example: `<p style="color: red;">Hello</p>`
+
+2. **ID Selectors**:
+   - Selectors that include an ID (`#`) have higher specificity than class or element selectors.
+   - Example: `#header { color: blue; }`
+
+3. **Class, Attribute, and Pseudo-Class Selectors**:
+   - Class selectors (`.`), attribute selectors (`[type="text"]`), and pseudo-classes (`:hover`, `:nth-child()`) have medium specificity.
+   - Example: `.my-class { color: green; }`
+
+4. **Element and Pseudo-Element Selectors**:
+   - Element selectors (`p`, `div`, `h1`) and pseudo-elements (`::before`, `::after`) have the lowest specificity.
+   - Example: `p { color: black; }`
+
+---
+
+### Specificity Calculation
+Specificity is represented as a tuple of four values: `(a, b, c, d)`, where:
+- `a`: Number of inline styles.
+- `b`: Number of ID selectors.
+- `c`: Number of class, attribute, and pseudo-class selectors.
+- `d`: Number of element and pseudo-element selectors.
+
+The specificity is compared from left to right. For example:
+- `(1, 0, 0, 0)` (inline style) beats `(0, 2, 0, 0)` (two IDs).
+- `(0, 1, 0, 0)` (one ID) beats `(0, 0, 10, 0)` (ten classes).
+
+---
+
+### Examples of Specificity
+
+#### Example 1:
+```css
+/* Specificity: (0, 0, 1, 0) */
+.my-class {
+    color: blue;
+}
+
+/* Specificity: (0, 0, 0, 1) */
+p {
+    color: red;
+}
+```
+In this case, `.my-class` has higher specificity than `p`, so the text color will be **blue**.
+
+---
+
+#### Example 2:
+```css
+/* Specificity: (0, 1, 0, 0) */
+#header {
+    color: green;
+}
+
+/* Specificity: (0, 0, 1, 0) */
+.header {
+    color: orange;
+}
+```
+Here, `#header` has higher specificity than `.header`, so the text color will be **green**.
+
+---
+
+#### Example 3:
+```css
+/* Specificity: (0, 0, 1, 1) */
+div p.my-class {
+    color: purple;
+}
+
+/* Specificity: (0, 0, 2, 0) */
+.my-class.another-class {
+    color: yellow;
+}
+```
+In this case, `.my-class.another-class` has higher specificity than `div p.my-class`, so the text color will be **yellow**.
+
+---
+
+#### Example 4:
+```html
+<p style="color: pink;">Hello</p>
+```
+```css
+/* Specificity: (0, 0, 1, 0) */
+p {
+    color: red;
+}
+```
+Here, the inline style (`style="color: pink;"`) has the highest specificity, so the text color will be **pink**.
+
+---
+
+### Important Notes:
+1. **`!important` Rule**:
+   - The `!important` declaration overrides all other specificity rules.
+   - Example:
+     ```css
+     p {
+         color: red !important;
+     }
+     ```
+     This will make the text color **red**, regardless of other conflicting rules.
+
+2. **Equal Specificity**:
+   - If two rules have the same specificity, the one that appears **last** in the CSS file takes precedence.
+
+3. **Universal Selector (`*`)**:
+   - The universal selector has no specificity (`(0, 0, 0, 0)`).
+
+4. **Combined Selectors**:
+   - When combining selectors, their specificity values are added together.
+   - Example: `div#header .my-class` has a specificity of `(0, 1, 1, 1)`.
+
+---
+
+### Specificity Cheat Sheet
+| Selector Type               | Example                | Specificity Value |
+|-----------------------------|------------------------|-------------------|
+| Inline Style                | `style="color: red;"`  | `(1, 0, 0, 0)`    |
+| ID Selector                 | `#header`              | `(0, 1, 0, 0)`    |
+| Class Selector              | `.my-class`            | `(0, 0, 1, 0)`    |
+| Attribute Selector          | `[type="text"]`        | `(0, 0, 1, 0)`    |
+| Pseudo-Class                | `:hover`               | `(0, 0, 1, 0)`    |
+| Element Selector            | `p`                    | `(0, 0, 0, 1)`    |
+| Pseudo-Element              | `::before`             | `(0, 0, 0, 1)`    |
+| Universal Selector          | `*`                    | `(0, 0, 0, 0)`    |
+
+---
+
+### Practical Tips:
+- Avoid using `!important` unless absolutely necessary, as it can make debugging difficult.
+- Use IDs sparingly, as they increase specificity significantly.
+- Organize your CSS to avoid unnecessary conflicts.
+- Use tools like browser developer tools to inspect and debug specificity issues.
+</pre>
+</body>
+</html>

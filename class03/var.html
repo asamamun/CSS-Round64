@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: #90db34; /* Define a CSS variable */
+        --fan-size: 200px;
+        --fan-color-red: #ff0000;
+        --fan-color-blue: #0000ff;
+        --fan-color-green: #00ff00;
+        --text-red: #ff0000;
+        --text-blue: #0000ff;
+        --text-green: #00ff00;
+      }
+      .box{
+        display: inline-block;
+        width: var(--fan-size);
+        height: var(--fan-size);
+        background-color: var(--primary-color);
+        margin: 10px;
+      }
+      h1{
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>understanding VAR keyword</h1>
+    <p>
+      --var keyword is used to declare a global variable and you can use it  anywhere in your code. <mark> var keywords should be defined in the :root selector.</mark>
+    </p>
+    <h1>var definition</h1>
+    <p>The var() function in CSS is used to insert the value of a custom property (CSS variable). </p>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

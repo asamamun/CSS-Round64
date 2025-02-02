@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Ceiling Fan</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .fan {
+      width: 200px; /* Adjust based on your image size */
+      height: auto;
+      animation: rotateFan 2000ms linear infinite; /* Rotate continuously */
+    }
+
+    @keyframes rotateFan {
+      from {
+        transform: rotate(0turn);
+      }
+      to {
+        transform: rotate(2turn);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="images/fan.png" alt="Ceiling Fan" class="fan">
+</body>
+</html>

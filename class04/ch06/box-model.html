@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      p {
+        width: 100%;
+        max-width: 1200px;
+        min-width: 600px;
+        padding: 30px;
+        /* margin: 40px; */
+        margin: 0 auto;
+        border: 5px solid black;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS box model</h1>
+    <p>
+      CSS box model is the box that wraps the content of an element. Box model
+      has 4 parts: content, padding, border, margin. The CSS box model consists
+      of the following components: Content This is the content of an HTML
+      element, such as a paragraph, image, &lt;div&gt;, or &lt;span&gt;. Padding
+      Horizontal and vertical space surrounding the content. Border A border
+      drawn around the padding. Margin Horizontal and vertical space outside the
+      border.
+    </p>
+    <h1>Box-Sizing Property</h1>
+    <p>
+      The box-sizing property can change how the width is calculated:
+      <br />
+      content-box (default): The width property only sets the content width.
+      Padding and border are added outside the width.
+      <br />
+      border-box: The width property includes the content, padding, and border.
+      This makes it easier to manage the total width of an element.
+    </p>
+    <img
+      src="images/CSS-Box-Model.webp"
+      alt=""
+      width="800px"
+      style="display: block; margin: 0 auto"
+    />
+  </body>
+</html>

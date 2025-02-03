@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        .container{
+            /* width: 600px; */
+            margin: 0 auto;
+        }
+        div.box{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border:1px solid black;
+            padding: 10px;
+            /* border-collapse: collapse; */
+            margin: 10px;
+            /* margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px; */
+            /* margin: 10px 20px 30px 40px; */
+            /* margin: 10px 20px 30px; */
+            /* margin: 10px 20px; */
+            /* margin: 10px; */
+            /* margin: 10px 20px 30px 40px; */
+            /* margin: 10px 20px 30px 40px; */
+            transition: all 1s ease-in-out;
+        }
+        h1{
+            margin: 40px;
+        }
+        p span{
+            margin: 50px;
+            padding: 20px;
+            background-color: aqua;
+        }
+        h1 + h3{ display: none; transition: all 1s ease;}
+        h1:hover + h3{ display: block;}
+        .box:hover{
+            /* transform: rotateX(5deg) rotateY(5deg) rotateZ(10deg); */
+            /* transform: rotate(270deg); */
+            transform: skew(30deg);
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>for block elements vertical margin collapse</h1>
+    <h3>inline elements margin does not work vertically but works horizontally </h3>
+    <h3>inline elements padding does not work vertically but works horizontally </h3>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <h1>for heading and mostly in block elements vertical margin collapse</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+
+    <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing elit</span>. Est accusantium magni, porro assumenda sed in fugit recusandae autem? Nihil perspiciatis asperiores in blanditiis aut magni maiores dolorem rem placeat quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat quas impedit ipsa ex pariatur rerum cupiditate similique possimus debitis, sed voluptates, quo laboriosam iusto quae rem modi corrupti molestias.</p>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+</body>
+</html>

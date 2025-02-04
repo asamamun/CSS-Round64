@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure{
+            float: left;
+            width: 400px;;
+        }
+        figcaption{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="images/antibes.jpg" alt="italy map" usemap="#italy">
+        <figcaption>italy map</figcaption>
+    </figure>
+    <figure>
+        <img src="images/casino.jpg" alt="casino map">
+        <figcaption>casino map</figcaption>
+    </figure>
+    <figure>
+        <img src="images/nice_seafront.jpg" alt="nice seafront">
+        <figcaption>nice seafront</figcaption>
+    </figure>
+    <map name="italy">
+        <area shape="rect" coords="0,0,100,100" href="top-left.html" alt="">
+        <area shape="rect" coords="100,100,200,200" href="top-right.html" alt="">
+    </map>
+</body>
+</html>

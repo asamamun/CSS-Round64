@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        .container{
+            width: calc(100vw - 30px);
+            margin: 0 auto;
+            color: rgb(30, 26, 26);
+            background-image: linear-gradient(to top, red, green, blue, aqua,yellow,gray,teal, fuchsia,violet);
+        }
+        .box{
+            float:right;
+            border:1px solid black;
+            width:150px;
+            height:150px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .clear{
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>for block elements vertical margin collapse</h1>
+    <h3>inline elements margin does not work vertically but works horizontally </h3>
+    <h3>inline elements padding does not work vertically but works horizontally </h3>
+    <div class="box">some content in div element 1</div>
+    <div class="box">some content in div element 2</div>
+    <div class="box">some content in div element 3</div>
+    <div class="box">some content in div element 4</div>
+    <div class="box">some content in div element 5</div>
+    <div class="box">some content in div element 6</div>
+    <div class="box">some content in div element 7</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <div class="box">some content in div element</div>
+    <h1 class="clear">for heading and mostly in block elements vertical margin collapse</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+    <h1>This is a heading</h1>
+
+    <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing elit</span>. Est accusantium magni, porro assumenda sed in fugit recusandae autem? Nihil perspiciatis asperiores in blanditiis aut magni maiores dolorem rem placeat quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat quas impedit ipsa ex pariatur rerum cupiditate similique possimus debitis, sed voluptates, quo laboriosam iusto quae rem modi corrupti molestias.</p>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+</body>
+</html>

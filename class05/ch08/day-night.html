@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Night Mode</title>
+    <style>
+        /* Default (Day Mode) */
+body {
+    background-color: gold;
+    color: #000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Night Mode */
+body.night-mode {
+    background-color: #0b0000;
+    color: #fff;
+}
+    </style>
+</head>
+<body class="">
+    <div class="container">
+        <h1>Welcome to the Day and Night Demo</h1>
+        <p>This site changes its theme based on the time of day.</p>
+    </div>
+    <!-- <script>
+        // Function to check the time and apply the appropriate mode
+function setDayNightMode() {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    // Add or remove the 'night-mode' class based on the time
+    if (currentHour >= 18 || currentHour < 6) { // Night time (6 PM to 6 AM)
+        document.body.classList.add('night-mode');
+    } else { // Day time (6 AM to 6 PM)
+        document.body.classList.remove('night-mode');
+    }
+}
+
+// Set the mode when the page loads
+setDayNightMode();
+
+// Update the mode every minute (optional)
+setInterval(setDayNightMode, 60000);
+    </script> -->
+</body>
+</html>

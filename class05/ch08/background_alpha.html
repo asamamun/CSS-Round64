@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Background with Alpha Transparency</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        color: #000;
+        background-color: #d2e1e6;
+      }
+      #yachts {
+        width: 500px;
+        height: 617px;
+        margin: 0 auto;
+        background-image: url(images/yachts.jpg);
+        /* background-repeat: no-repeat;
+        background-position: center top;
+        padding-top: 50px; */
+      }
+      #sailing {
+        background-color: #fff;
+        background: rgba(175, 83, 83, 0.324);
+        width: 230px;
+        padding: 10px;
+        margin-left: 230px;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="yachts">
+      <div id="sailing">
+        <h1>Sailing</h1>
+        <p id="readcontent">
+          hello world from bangladesh, mirpur, dhaka, Round 64. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis aut optio autem eligendi nesciunt provident sit impedit laborum, esse ipsum odio natus explicabo, a, veniam vel quam voluptatem ab possimus!
+        </p>
+      </div>
+    </div>
+    <script src="asset/jquery-3.7.1.min.js"></script>
+    <script>
+        function talk(s, voiceIndex = 0, pitch = 1) {
+  let utterance = new SpeechSynthesisUtterance();
+  utterance.text = s;
+
+  // Set the voice
+  const voices = window.speechSynthesis.getVoices();
+  utterance.voice = voices[voiceIndex]; // Select a voice by index
+
+  // Set the pitch
+  utterance.pitch = pitch; // Set the pitch (0 to 2)
+
+  // Speak the utterance
+  window.speechSynthesis.speak(utterance);
+}
+
+// Example usage:
+// talk("Hello, how are you?", 2, 1.5); // Uses the 3rd voice and a higher pitch
+      /*
+      function talk(s) {
+        let utterance = new SpeechSynthesisUtterance();
+
+        // Set the text and voice of the utterance
+        utterance.text = s;
+        utterance.voice = window.speechSynthesis.getVoices()[0];
+
+        // Speak the utterance
+        window.speechSynthesis.speak(utterance);
+      }
+        */
+      // talk("hello world!!");
+      /* alert(5);
+        function getVoices() {
+            let voices = speechSynthesis.getVoices();
+            if (!voices.length) {
+                let utterance = new SpeechSynthesisUtterance("");
+                speechSynthesis.speak(utterance);
+                voices = speechSynthesis.getVoices();
+            }
+            return voices;
+        }
+        function talk(s) {
+            if ('speechSynthesis' in window) {
+                let speakData = new SpeechSynthesisUtterance();
+                speakData.volume = 1; // From 0 to 1
+                speakData.rate = 1; // From 0.1 to 10
+                speakData.pitch = 1; // From 0 to 2
+                speakData.text = s;
+                speakData.lang = 'en';
+                // console.log(getVoices());
+                speakData.voice = getVoices()[0];
+
+                speechSynthesis.speak(speakData);
+            } else {
+                // Speech Synthesis is not Supported 😞 
+                // alert(66)
+            }
+        } */
+      $(document).ready(function () {
+        let content = $("#readcontent").text();
+        // alert(content);
+        // talk(content,5, 1);
+      });
+    </script>
+  </body>
+</html>

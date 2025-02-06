@@ -1,0 +1,46 @@
+/* Basic styling for the navigation */
+#nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: flex;
+  }
+  
+  #nav li {
+    position: relative;
+  }
+  
+  #nav li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #nav li a:hover {
+    background-color: #555;
+  }
+  
+  /* Hide nested dropdowns by default */
+  #nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+  }
+  
+  #nav ul ul {
+    top: 0;
+    left: 100%;
+  }
+  
+  /* Show dropdown on hover */
+  #nav li:hover > ul {
+    display: block;
+  }

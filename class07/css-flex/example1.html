@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Stacks items top to bottom */
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .header, .footer {
+            background: steelblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+        }
+
+        .footer {
+            background: darkgray;
+            font-size: 1em;
+        }
+
+        /* Flex container for Sidebar & Content */
+        .main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            flex: 1; /* 1/4 width */
+            background: lightgray;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 3; /* 3/4 width */
+            background: lightblue;
+            padding: 20px;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            background: white;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ddd;
+        }
+
+        /* Responsive: Stack Sidebar & Content */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">Header</div>
+
+        <div class="main">
+            <div class="sidebar">
+                <h3>Sidebar heading</h3>
+                <p>This sidebar is floated left.</p>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>Content</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis sunt et quisquam ullam laborum quae architecto, reiciendis delectus consequatur dolore doloremque, omnis in molestias sed quasi alias sint totam.</p>
+            </div>
+        </div>
+
+        <div class="footer">Footer all rights reserved</div>
+    </div>
+
+</body>
+</html>

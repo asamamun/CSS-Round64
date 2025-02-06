@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* child selector */
+      /* ul.menu>li{
+            color: red;
+            
+        } */
+      .menu > li {
+        color: red; /* Change this to your desired color */
+      }
+      .menu ul li {
+        color: initial; /* Reset color for nested <li> elements */
+      }
+      /* child selector */
+      #parent  > div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        margin: 10px;
+        overflow: auto;
+      }
+      #parent > div > div {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(75, 158, 177);
+        margin: 10px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>Child Selector (this will be colored)</li>
+      <li>
+        Child Selector (this will be colored)
+        <ul>
+          <li>Deep nest one (this will NOT be colored)</li>
+          <li>
+            Deep nest two (this will NOT be colored)
+            <ul>
+              <li>Deep nest two one (this will NOT be colored)</li>
+              <li>Deep nest two two (this will NOT be colored)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Child Selector (this will be colored)</li>
+      <li>Child Selector (this will be colored)</li>
+    </ul>
+    <!-- <ul class="menu">
+        <li>Child Selector</li>
+        <li>Child Selector
+            <ul>
+                <li>Deep nest one</li>
+                <li>Deep nest two
+                    <ul>
+                        <li>Deep nest two one</li>
+                        <li>Deep nest two two</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Child Selector</li>
+        <li>Child Selector</li>
+    </ul> -->
+
+    <div id="parent">
+        <div>child div of div parent 1</div>
+        <div>child div of div parent 2
+            <div>child div of div div parent 2 1</div>
+            <div>child div of div div parent 2 2</div>
+            <div>child div of div div parent 2 3</div>
+        </div>
+        <div>child div of div parent 3</div>
+        <div>child div of div parent 4</div>
+    </div>
+  </body>
+</html>

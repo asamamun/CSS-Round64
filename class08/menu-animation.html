@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* Define animation */
+@keyframes menuAnimation {
+  0% {
+    transform: rotate(0deg) skew(0deg);
+    color: white;
+    background-color: black;
+  }
+  50% {
+    transform: rotate(10deg) skew(10deg);
+    color: yellow;
+    background-color: blue;
+  }
+  100% {
+    transform: rotate(0deg) skew(0deg);
+    color: white;
+    background-color: red;
+  }
+}
+      /* Styling for navigation */
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background: #2222222c;
+        padding: 20px;
+      }
+      /* Style for menu items */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+  /* Apply animation */
+  animation: menuAnimation 2s infinite alternate ease-in-out;
+}
+/* Delayed animations for each item */
+nav ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+nav ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+nav ul li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+nav ul li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+nav ul li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

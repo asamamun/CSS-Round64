@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  */
+        /* Container for the thumbnails */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Thumbnail images */
+.box img {
+    width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.box img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+/* activates the id which is shown in the address bar */
+.lightbox:target {
+    display: block;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: #ccc;
+}
+        /*  */
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box">
+           <a href="table1.PNG"> <img src="table1.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table2.PNG"> <img src="table2.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table3.PNG"> <img src="table3.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table4.PNG"> <img src="table4.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table5.PNG"> <img src="table5.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table6.PNG"> <img src="table6.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table7.PNG"> <img src="table7.PNG" alt=""> </a>
+        </div>
+        <div class="box">
+           <a href="table8.PNG"> <img src="table8.PNG" alt=""> </a>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="box">
+            <a href="#img1"> <img src="table1.PNG" alt="Table 1"> </a>
+        </div>
+        <div class="box">
+            <a href="#img2"> <img src="table2.PNG" alt="Table 2"> </a>
+        </div>
+        <div class="box">
+            <a href="#img3"> <img src="table3.PNG" alt="Table 3"> </a>
+        </div>
+        <div class="box">
+            <a href="#img4"> <img src="table4.PNG" alt="Table 4"> </a>
+        </div>
+        <div class="box">
+            <a href="#img5"> <img src="table5.PNG" alt="Table 5"> </a>
+        </div>
+        <div class="box">
+            <a href="#img6"> <img src="table6.PNG" alt="Table 6"> </a>
+        </div>
+        <div class="box">
+            <a href="#img7"> <img src="table7.PNG" alt="Table 7"> </a>
+        </div>
+        <div class="box">
+            <a href="#img8"> <img src="table8.PNG" alt="Table 8"> </a>
+        </div>
+    </div>
+    
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="img1">
+        <a href="#_" class="close">&times;</a>
+        <img src="table1.PNG" alt="Table 1">
+    </div>
+    <div class="lightbox" id="img2">
+        <a href="#_" class="close">&times;</a>
+        <img src="table2.PNG" alt="Table 2">
+    </div>
+    <div class="lightbox" id="img3">
+        <a href="#_" class="close">&times;</a>
+        <img src="table3.PNG" alt="Table 3">
+    </div>
+    <div class="lightbox" id="img4">
+        <a href="#_" class="close">&times;</a>
+        <img src="table4.PNG" alt="Table 4">
+    </div>
+    <div class="lightbox" id="img5">
+        <a href="#_" class="close">&times;</a>
+        <img src="table5.PNG" alt="Table 5">
+    </div>
+    <div class="lightbox" id="img6">
+        <a href="#_" class="close">close</a>
+        <img src="table6.PNG" alt="Table 6">
+    </div>
+    <div class="lightbox" id="img7">
+        <a href="#_" class="close">&times;</a>
+        <img src="table7.PNG" alt="Table 7">
+    </div>
+    <div class="lightbox" id="img8">
+        <a href="#_" class="close">&times;</a>
+        <img src="table8.PNG" alt="Table 8">
+    </div>
+</body>
+</html>
